@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TN01_WFCadastroContato
 {
-    public class Pessoa
+    public class Cadastro
     {
-        public Pessoa(string? Nome, string? Sobrenome,string? DddTelefone, string? Email)
+        public Cadastro(string? Nome, string? Sobrenome,string? DddTelefone, string? Email)
             
         {
             Nome = Nome;
@@ -17,13 +17,13 @@ namespace TN01_WFCadastroContato
             Email = Email;
 
         }
-        public Pessoa()
+        public Cadastro()
         {
 
         }
         
 
-        public static List<Pessoa> ListaPessoas = new List<Pessoa>();
+        public static List<Cadastro> ListaPessoas = new List<Cadastro>();
 
         public string? Nome { get; set; }
         

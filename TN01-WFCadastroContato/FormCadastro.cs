@@ -35,7 +35,7 @@ namespace TN01_WFCadastroContato
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Pessoa p1 = new Pessoa();
+            Cadastro p1 = new Cadastro();
             p1.Nome = txtNome.Text;
             p1.Sobrenome = txtSobrenome.Text;
             p1.DddTelefone = mkdTelefone.Text;
@@ -65,8 +65,8 @@ namespace TN01_WFCadastroContato
                 return;
             }
 
-            Pessoa.ListaPessoas.Add(p1);
-            MessageBox.Show($"Olá {p1.Nome} {p1.Sobrenome} \n {p1.DddTelefone} \n {p1.TipoTelefone} \n {p1.Email} \n cadastrado com sucesso!", "Sucesso",
+            Cadastro.ListaPessoas.Add(p1);
+            MessageBox.Show($"Olá {p1.Nome} {p1.Sobrenome} \n {p1.DddTelefone} \n {p1.TipoTelefone} \n {p1.Email} \n seu cadastrado foi concluido com sucesso!", "Sucesso",
                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimparFormulario();
         }
