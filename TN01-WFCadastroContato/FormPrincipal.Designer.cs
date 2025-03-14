@@ -1,6 +1,6 @@
 ﻿namespace TN01_WFCadastroContato
 {
-    partial class FormMain
+    partial class FormPrincipal
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,22 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             menuStrip1 = new MenuStrip();
             mnsCadastrar = new ToolStripMenuItem();
             mnsSobre = new ToolStripMenuItem();
             mnsSair = new ToolStripMenuItem();
-            pictureBox1 = new PictureBox();
+            picMenu = new PictureBox();
+            mnsListagem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picMenu).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { mnsCadastrar, mnsSobre, mnsSair });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { mnsCadastrar, mnsSobre, mnsListagem, mnsSair });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(276, 24);
-            menuStrip1.TabIndex = 1;
+            menuStrip1.Size = new Size(573, 24);
+            menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // mnsCadastrar
@@ -58,6 +60,7 @@
             mnsSobre.Name = "mnsSobre";
             mnsSobre.Size = new Size(49, 20);
             mnsSobre.Text = "Sobre";
+            mnsSobre.Click += mnsSobre_Click;
             // 
             // mnsSair
             // 
@@ -66,28 +69,41 @@
             mnsSair.Text = "Sair";
             mnsSair.Click += mnsSair_Click;
             // 
-            // pictureBox1
+            // picMenu
             // 
-            pictureBox1.Image = Properties.Resources.projeto2;
-            pictureBox1.Location = new Point(2, 27);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(274, 184);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            picMenu.Dock = DockStyle.Fill;
+            picMenu.Image = (Image)resources.GetObject("picMenu.Image");
+            picMenu.Location = new Point(0, 24);
+            picMenu.Name = "picMenu";
+            picMenu.Size = new Size(573, 366);
+            picMenu.SizeMode = PictureBoxSizeMode.StretchImage;
+            picMenu.TabIndex = 1;
+            picMenu.TabStop = false;
             // 
-            // FormMain
+            // mnsListagem
+            // 
+            mnsListagem.Name = "mnsListagem";
+            mnsListagem.Size = new Size(67, 20);
+            mnsListagem.Text = "Listagem";
+            mnsListagem.Click += mnsListagem_Click;
+            // 
+            // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(276, 208);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(573, 390);
+            Controls.Add(picMenu);
             Controls.Add(menuStrip1);
-            Name = "FormMain";
-            Text = "Form1";
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FormPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Menu Principal";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picMenu).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,9 +111,10 @@
         #endregion
 
         private MenuStrip menuStrip1;
+        private ToolStripMenuItem mnsCadastrar;
         private ToolStripMenuItem mnsSobre;
         private ToolStripMenuItem mnsSair;
-        private PictureBox pictureBox1;
-        private ToolStripMenuItem mnsCadastrar;
+        private PictureBox picMenu;
+        private ToolStripMenuItem mnsListagem;
     }
 }
