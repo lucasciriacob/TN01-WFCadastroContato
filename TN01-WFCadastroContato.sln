@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TN01-WFCadastroContato", "TN01-WFCadastroContato\TN01-WFCadastroContato.csproj", "{74E8A5C6-7B4B-434B-A01F-444CBD634A05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFAcesso", "WFAcesso\WFAcesso.csproj", "{FDBEAF17-07DB-4E22-849A-F0097E5ECB65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{74E8A5C6-7B4B-434B-A01F-444CBD634A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74E8A5C6-7B4B-434B-A01F-444CBD634A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74E8A5C6-7B4B-434B-A01F-444CBD634A05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDBEAF17-07DB-4E22-849A-F0097E5ECB65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDBEAF17-07DB-4E22-849A-F0097E5ECB65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDBEAF17-07DB-4E22-849A-F0097E5ECB65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDBEAF17-07DB-4E22-849A-F0097E5ECB65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
