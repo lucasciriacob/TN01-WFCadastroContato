@@ -8,17 +8,19 @@ namespace WFAcesso
         public FormLogin()
         {
             InitializeComponent();
+            txtLogin.Focus();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
+            
             Usuario us = new Usuario();
             us.Codigo = 1000;
             us.Login = "user";
             us.Senha = "123456";
             us.DataCadastro = Convert.ToDateTime("10/01/2025 18:30");
             Usuario.ListaUsuarios.Add(us);
-            txtLogin.Focus();
+            
 
         }
         public void LimparForm()
@@ -36,7 +38,7 @@ namespace WFAcesso
             {
                 if (user.Login == TelaUsuario.Login && user.Senha == TelaUsuario.Senha)
                 {
-                    MessageBox.Show("Usuário logado com sucesso!", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
                     FormMain formMain = new FormMain();
                     formMain.Show();
                     LimparForm();
