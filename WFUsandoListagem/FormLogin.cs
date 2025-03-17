@@ -36,6 +36,7 @@ namespace WFAcesso
 
             foreach (Usuario user in Usuario.ListaUsuarios)
             {
+                
                 if (user.Login == TelaUsuario.Login && user.Senha == TelaUsuario.Senha)
                 {
                    

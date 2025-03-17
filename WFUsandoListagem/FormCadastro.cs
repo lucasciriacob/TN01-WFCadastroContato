@@ -39,7 +39,7 @@ namespace WFUsandoListagem
             u.Codigo = Usuario.ListaUsuarios.Count + 1000;
             u.DataCadastro = DateTime.Now;
 
-
+            //checando as senhas 
             if (u.Senha != csenha)
             {
                 MessageBox.Show("As senhas não conferem.", "Erro",
