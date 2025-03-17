@@ -82,7 +82,10 @@
             Controls.Add(btnCadastrar);
             Controls.Add(txtSenha);
             Controls.Add(txtLogin);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormCadastro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Novo Usuario";
             ResumeLayout(false);
             PerformLayout();

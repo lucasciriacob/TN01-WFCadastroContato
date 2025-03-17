@@ -16,8 +16,7 @@ namespace WFAcesso
             us.Codigo = 1000;
             us.Login = "user";
             us.Senha = "123456";
-            us.DataCadastro = Convert.ToDateTime("01/01/2000");
-            us.DataCadastro = Convert.ToDateTime("18:30");
+            us.DataCadastro = Convert.ToDateTime("10/01/2025 18:30");
             Usuario.ListaUsuarios.Add(us);
 
         }

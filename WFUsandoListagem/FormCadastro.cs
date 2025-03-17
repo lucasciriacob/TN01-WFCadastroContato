@@ -17,7 +17,19 @@ namespace WFUsandoListagem
         {
             InitializeComponent();
         }
-
+        private void LimparCampos()
+        {
+            txtLogin.Clear();
+            txtSenha.Clear();
+            txtCSenha.Clear();
+            txtLogin.Focus();
+        }
+        private void LimparSenhas()
+        {
+            txtSenha.Clear();
+            txtCSenha.Clear();
+            txtSenha.Focus();
+        }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             Usuario u = new Usuario();
@@ -32,7 +44,16 @@ namespace WFUsandoListagem
             {
                 MessageBox.Show("As senhas não conferem.", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LimparSenhas();
                 return;
+            }
+            if(Usuario.ListaUsuarios.Exists(x => x.Login == u.Login))
+            {
+                MessageBox.Show("Usuário já cadastrado.", "Erro",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                LimparCampos();
+                return;
+                
             }
 
             Usuario.ListaUsuarios.Add(u);

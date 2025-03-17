@@ -85,7 +85,10 @@
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormMain";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Menu";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
