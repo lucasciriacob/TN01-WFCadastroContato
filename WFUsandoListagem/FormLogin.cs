@@ -18,6 +18,7 @@ namespace WFAcesso
             us.Senha = "123456";
             us.DataCadastro = Convert.ToDateTime("10/01/2025 18:30");
             Usuario.ListaUsuarios.Add(us);
+            txtLogin.Focus();
 
         }
         public void LimparForm()

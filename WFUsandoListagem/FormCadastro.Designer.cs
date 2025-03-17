@@ -87,6 +87,7 @@
             Name = "FormCadastro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Novo Usuario";
+            Load += FormCadastro_Load;
             ResumeLayout(false);
             PerformLayout();
         }

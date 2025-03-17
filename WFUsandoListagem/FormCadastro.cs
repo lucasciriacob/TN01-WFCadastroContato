@@ -40,20 +40,20 @@ namespace WFUsandoListagem
             u.DataCadastro = DateTime.Now;
 
 
-            if (u.Senha!= csenha)
+            if (u.Senha != csenha)
             {
                 MessageBox.Show("As senhas não conferem.", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LimparSenhas();
                 return;
             }
-            if(Usuario.ListaUsuarios.Exists(x => x.Login == u.Login))
+            if (Usuario.ListaUsuarios.Exists(x => x.Login == u.Login))
             {
                 MessageBox.Show("Usuário já cadastrado.", "Erro",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LimparCampos();
                 return;
-                
+
             }
 
             Usuario.ListaUsuarios.Add(u);
@@ -86,6 +86,11 @@ namespace WFUsandoListagem
             {
                 btnCadastrar.PerformClick();
             }
+        }
+
+        private void FormCadastro_Load(object sender, EventArgs e)
+        {
+            txtLogin.Focus();
         }
     }
 
